@@ -1,0 +1,61 @@
+.content-container {
+    width: 1000px;
+    margin: auto;
+}
+
+.grid-container {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 10px solid white;
+}
+
+.grid-item {
+    display: inline;
+    border: 1px solid white;
+    border-bottom: none;
+    border-right: none;
+    width: 100px;
+    height: 700px;
+}
+
+.size-panel {
+    display: block;
+    float: right;
+    width: 100px;
+    height: 700px;
+}
+
+.size-panel > button {
+    width: 80px;
+    height: 80px;
+}
+
+.move-panel {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.move-panel > button {
+    width: 80px;
+    height: 80px;
+}
+
+.panel {
+    display: block;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 20px;
+    font-size: 30px;
+    color:rgb(59, 47, 88);
+    padding: 14px;
+}
+

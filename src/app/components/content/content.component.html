@@ -1,0 +1,30 @@
+<div class="content-container">
+    <div class="size-panel">
+        <button (click)="changeGridSize(-1)">+</button>
+        <button (click)="changeGridSize(1)">-</button>
+    </div>
+    <div class="move-panel">
+        <button (click)="changeGridOffset([0, 1])">&#8593;</button>
+        <button (click)="changeGridOffset([0, -1])">&#8595;</button>
+        <button (click)="changeGridOffset([-1, 0])">&#8594;</button>
+        <button (click)="changeGridOffset([1, 0])">&#8592;</button>
+    </div>
+    <div class="grid-container" [style.grid-template-columns]=" 'auto '.repeat(gridSize) ">
+    <app-grid-tile
+        *ngFor="let element of visibleGrid"
+        [value]="element"
+        [offset]="gridOffset"
+        (newItemEvent)="addCoords($event)"
+        class="grid-item"
+        [style.width]="700 / gridSize - 1 + 'px'"
+        [style.height]="700 / gridSize - 1 + 'px'"
+    ></app-grid-tile>
+    </div>
+</div>
+
+
+<div class="panel">
+    <button (click)="restartGrid()">restart</button>
+    <button (click)="startGame()">start</button>
+    <button (click)="stopGame()">stop</button>
+</div>

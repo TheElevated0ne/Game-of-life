@@ -1,0 +1,22 @@
+
+.inactive {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(59, 47, 88);
+    transition: background-color 0.7s cubic-bezier(0,0.5,0,.83);
+}
+
+.inactive:hover {
+    background-color: white;
+}
+
+.active {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: background-color 0.5s;
+}
+
+.active:hover {
+    background-color: white;
+}
